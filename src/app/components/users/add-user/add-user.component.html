@@ -1,0 +1,144 @@
+
+<div class="card" >
+    
+    <h3 class="card-header text-center my-color"  >
+        Add User
+    </h3>
+
+    <div class="card-body">
+        <form  [formGroup]="exform" (ngSubmit)="submitHandler()">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="exampleInputUserName">UserName</label>
+                        <input  formControlName="Username" type="text" class="form-control" placeholder="Enter UserName">
+                        <small *ngIf="Username.invalid && Username.touched" class="text-danger"Name>UserName is Required</small> 
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="exampleInputFullName">FullName</label>
+                        <input  formControlName="FullName" type="text" class="form-control" placeholder="Enter FullName">
+                        <small *ngIf="FullName.invalid && FullName.touched" class="text-danger">FullName is Required</small> 
+
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="inputCity">City</label>
+                        <input  formControlName="City" type="text" class="form-control" id="inputCity">
+                        <small *ngIf="City.invalid && City.touched" class="text-danger">City is Required</small> 
+
+                    </div>
+                 
+                </div>
+                <div class="col">              
+                    <label for="inputAddress">Address</label>
+                    <input  formControlName="Address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <small *ngIf="Address.invalid && Address.touched" class="text-danger">Address is Required</small> 
+
+                </div>
+      
+            </div> -->
+            
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input  formControlName="email"  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small *ngIf="email.invalid && email.touched" class="text-danger">Email is Required</small>
+        
+                    </div>
+                 
+                </div>
+                <div class="col">
+                    <!-- <div class="form-group">
+                        <label for="exampleInputRole">Role </label>
+                     <br> 
+                     <select name="role" [(ngModel)]="roleId"  [ngModelOptions]="{standalone: true}" class="form-control form-control-primary"(change)="onChangeRole($event)">
+                        <option *ngFor="let p of roles" [ngValue]="p.id">
+                            {{ p.title }}
+                          </option>
+                      </select>
+                      
+                    </div> -->
+
+                    <div class="form-group">
+                        <label for="role" class="form-control-label">Role</label>
+                        <select
+                            class="form-control"
+                            name="role"
+                            id="role"
+                            [(ngModel)]="roleId"
+                            [ngModelOptions]="{standalone: true}"
+                            (change)="onChangeRole($event)"
+                        >
+                            <option *ngFor="let r of roles" [value]="r.id">
+                                {{ r.title }}
+                            </option>
+                        </select>
+                    </div>
+
+
+                </div>
+      
+            </div>           
+ 
+
+
+
+
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input  formControlName="password"   type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <small *ngIf="password.invalid && password.touched" class="text-danger">
+                    Password is invalid
+                </small>
+
+
+           
+           
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Confirm Password</label>
+                <input   formControlName="confirmPassword"  type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+                <small *ngIf="confirmPassword.invalid && confirmPassword.touched" class="text-danger">
+                    Confirm Password is invalid
+                </small>
+
+                <!-- <div *ngIf="f.confirm_password.touched && f.confirm_password.invalid" class="alert alert-danger">
+                    <div *ngIf="f.confirm_password.errors.required">Password is required.</div>
+                    <div *ngIf="f.confirm_password.errors.confirmedValidator">Password and Confirm Password must be match.</div>
+                </div>--> 
+           
+            </div>
+
+       
+         
+            <div class="text-center">
+                <button type="submit" class="btn my-color" >Add</button>
+            </div>
+        </form>
+
+  
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

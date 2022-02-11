@@ -1,0 +1,73 @@
+<div class="col-md-6 col-xl-12">
+  <app-card [title]="'Users list'" [cardClass]="'recent-candidate-card'" [blockClass]="'p-t-0 p-b-0'">
+    
+    <input
+			type="text"
+			placeholder="Search"
+			class="form-control ml-25"
+			[(ngModel)]="searchText"
+			(keyup)="Search()"
+		/>
+
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Photo</th>
+            <th>User Name</th>
+            <th>Full Name</th>
+            <th>Email</th>
+             <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>       
+          <tr *ngFor="let u of users">
+            <td>{{ u.id }}</td>
+            <td>
+              <div
+                data-toggle="tooltip"
+                data-popup="tooltip-custom"
+                placement="top"
+                container="body"
+                title=""
+                class="avatar pull-up my-0"
+              >
+                <img
+                  [src]="u.photo"
+                  alt="Avatar"
+                  height="26"
+                  width="26"
+                />
+              </div>
+            </td>
+            <td>{{ u.username }}</td>
+            <td>{{ u.fullname }}</td>
+            <td>{{ u.email }}</td>
+             <td>{{ u.role?.title}}</td>
+            <td>
+              <div
+                class="d-flex justify-content-center align-items-center"
+              >
+                <a
+                  class="btn btn-link text-warning"
+                  routerLink="/users/edit/{{ u.id }}"
+                >
+                <i class="icofont icofont-ui-edit  f-16"></i>
+
+                </a>
+                <button
+                  class="btn btn-link text-danger"
+                  (click)="Remove(u)"
+                >
+                <i class="icofont icofont-ui-delete f-16 "></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </app-card>
+</div>

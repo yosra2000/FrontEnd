@@ -1,0 +1,51 @@
+
+<div class="col-md-6 col-xl-12">
+   <app-card [title]="'Roles List'" [cardClass]="'recent-candidate-card'" [blockClass]="'p-t-0 p-b-0'">
+     
+
+
+    <input
+    type="text"
+    placeholder="Search"
+    class="form-control ml-25"
+    [(ngModel)]="searchText"
+    (keyup)="Search()"
+  />
+
+
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let r of roles" >
+          <td>
+            {{ r.id }}
+          </td>
+          <td>{{ r.title}}</td>
+          <td>{{ r.description}}</td>
+          <td> 
+
+          <a routerLink="/roles/edit/{{ r.id }}"
+          href="javascript:" data-toggle="tooltip" title="Edit" ><i class="icofont icofont-ui-edit text-c-blue f-16"></i></a>
+          <button
+          class="btn btn-link text-danger"
+          (click)="Remove(r)"
+        >
+        <i class="icofont icofont-ui-delete f-16 "></i>
+        </button>          
+         </td>
+         
+   
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </app-card>
+</div>
