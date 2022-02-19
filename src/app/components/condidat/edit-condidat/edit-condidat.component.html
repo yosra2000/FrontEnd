@@ -1,0 +1,279 @@
+<div class="col-md-8 col-xl-12">
+  <div class="card widget-card-1">
+    <div class="card-block">
+      <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
+      <span class="text-c-blue f-w-600">
+        <h3 class="container d-flex align-items-center justify-content-center">
+          Condidat
+        </h3>
+      </span>
+      <h4></h4>
+      <div>
+        <span class="f-left m-t-10 text-muted">
+          <i class="text-c-blue f-16 icofont icofont-warning m-r-10"></i>Edit
+          Condidat
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card feed-card">
+  <div class="card-block p-t-0 p-b-0">
+    <div class="row">
+      <div class="col-2 bg-c-blue border-feed">
+        <i class="icofont icofont-users-alt-4 f-50"></i>
+      </div>
+      <div class="col-10">
+        <div class="p-t-30 p-b-30">
+          <form [formGroup]="form" (ngSubmit)="submitHandler()">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nom</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter UserName"
+                    formControlName="nom"
+                    value="{{ item.nom }}"
+                  />
+                  <small
+                    *ngIf="nom.invalid && nom.touched"
+                    class="text-danger"
+                    Name
+                    >nom is Required</small
+                  >
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">prénom</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter FullName"
+                    formControlName="prenom"
+                    value="{{ item.prenom }}"
+                  />
+                  <small
+                    *ngIf="prenom.invalid && prenom.touched"
+                    class="text-danger"
+                    Name
+                    >prenom is Required</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="role" class="form-control-label"
+                    >Type permis</label
+                  >
+                  <select
+                    class="form-control"
+                    name="permis"
+                    id="permis"
+                    [(ngModel)]="permisId"
+                    [ngModelOptions]="{ standalone: true }"
+                    (change)="onChangePermis($event)"
+                    value="{{ item.TypePermis }}"
+                  >
+                    <option *ngFor="let r of permis" [value]="r.id">
+                      {{ r.title }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <label for="inputAddress">Addresse</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                  formControlName="addresse"
+                  value="{{ item.addresse }}"
+                />
+                <small
+                  *ngIf="addresse.invalid && addresse.touched"
+                  class="text-danger"
+                  Name
+                  >addresse is Required</small
+                >
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="exampleInputProfession">Profession</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputProfession"
+                    aria-describedby="emailHelp"
+                    placeholder="doctor"
+                    formControlName="profession"
+                    value="{{ item.profession }}"
+                  />
+                  <small
+                    *ngIf="profession.invalid && profession.touched"
+                    class="text-danger"
+                    Name
+                    >profession is Required</small
+                  >
+                </div>
+              </div>
+              <!-- <div class="col">
+                <div class="mb-3">
+                  <label for="formFileSm" class="form-label"
+                    >Image condidat</label
+                  >
+                  <input
+                    class="form-control form-control-sm"
+                    id="formFileSm"
+                    type="file"
+                  />
+                </div>
+              </div> -->
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="exampleInputCin">Num cin</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter Cin"
+                    formControlName="cin"
+                    value="{{ item.cin }}"
+                  />
+                  <small
+                    *ngIf="cin.invalid && cin.touched"
+                    class="text-danger"
+                    Name
+                    >cin is Required
+                  </small>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="exampleInputPhone">Phone number</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter phone number"
+                    formControlName="phone"
+                    value="{{ item.phone }}"
+                  />
+                  <small
+                    *ngIf="phone.invalid && phone.touched"
+                    class="text-danger"
+                    Name
+                    >phone is Required
+                  </small>
+                </div>
+              </div>
+              <!-- <div class="col">
+                <form action="/">
+                  <label for="exampleInputPhone"> Date de naissance </label>
+
+                  <input
+                    type="date"
+                    class="form-control"
+                    formControlName="naissance"
+                  />
+                </form>
+              </div> -->
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="exampleInputCode">Nombre Examen code</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Nombre Examen code"
+                    formControlName="code"
+                    value="{{ item.code }}"
+                  />
+                  <small
+                    *ngIf="code.invalid && code.touched"
+                    class="text-danger"
+                    Name
+                    >code is Required
+                  </small>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="exampleInputConduit">Nombre Examen Canduit</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Nombre Examen Conduit"
+                    formControlName="conduit"
+                    value="{{ item.conduit }}"
+                  />
+                  <small
+                    *ngIf="conduit.invalid && conduit.touched"
+                    class="text-danger"
+                    Name
+                    >conduit is Required
+                  </small>
+                </div>
+              </div>
+              <div class="col">
+                <label for="inputAddress">Remarque</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="1 ére inscription"
+                  formControlName="remarque"
+                  value="{{ item.remarque }}"
+                />
+                <small
+                  *ngIf="remarque.invalid && remarque.touched"
+                  class="text-danger"
+                  Name
+                  >remarque is Required
+                </small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Addresse Email </label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+                formControlName="email"
+                value="{{ item.email }}"
+              />
+              <small
+                *ngIf="email.invalid && email.touched"
+                class="text-danger"
+                Name
+                >email is Required
+              </small>
+            </div>
+
+            <hr />
+
+            <div class="text-center">
+              <button class="btn btn-primary btn-outline-primary">
+                <i class="icofont icofont-eye-alt"></i> Edit Condidat
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

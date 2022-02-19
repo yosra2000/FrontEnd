@@ -1,57 +1,72 @@
-
-  <div class="col-md-6 col-xl-12">
-    <div class="card widget-card-1">
-      <div class="card-block-small">
-        <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
-        <span class="text-c-blue f-w-600">
-          <h3 class="container d-flex align-items-center justify-content-center"> Role</h3>
-         </span>
-        <h4></h4>
-        <div>
+<div class="col-md-6 col-xl-12">
+  <div class="card widget-card-1">
+    <div class="card-block-small">
+      <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
+      <span class="text-c-blue f-w-600">
+        <h3 class="container d-flex align-items-center justify-content-center">
+          Role
+        </h3>
+      </span>
+      <h4></h4>
+      <div>
         <span class="f-left m-t-10 text-muted">
-          <i class="text-c-blue f-16 icofont icofont-warning m-r-10"></i>Add Role
+          <i class="text-c-blue f-16 icofont icofont-warning m-r-10"></i>Update
+          Role
         </span>
-        </div>
       </div>
     </div>
   </div>
-
+</div>
 
 <div class="col-sm-12">
-
-    <app-card [title]="'  '">
-        <form   [formGroup]="form"  (ngSubmit)="submitHandler()" >
-            <div class="row">
-              
-                <div class="col">
-                    <div class="form-group">
-                        <label for="exampleInputTitle">Title</label>
-                        <input   formControlName="title"    type="text" class="form-control" placeholder="Enter Title" value="{{ item.title }}">
-                        <small *ngIf="title.invalid && title.touched" class="text-danger"Name>Title is Required</small> 
-  
-                      </div>
-                </div>
-            </div>
-            <div class="row">
-              
-              <div class="col">
-                  <div class="form-group">
-                      <label for="exampleInputDescription">Description</label>
-                      <input   formControlName="description"    type="text" class="form-control" placeholder="Enter Description" value="{{ item.description }}">
-                      <small *ngIf="description.invalid && description.touched" class="text-danger"Name>Description is Required</small> 
-
-                    </div>
-              </div>
+  <app-card [title]="'  '">
+    <form [formGroup]="form" (ngSubmit)="submitHandler()">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleInputTitle">Title</label>
+            <input
+              formControlName="title"
+              type="text"
+              class="form-control"
+              placeholder="Enter Title"
+              value="{{ item.title }}"
+            />
+            <small
+              *ngIf="title.invalid && title.touched"
+              class="text-danger"
+              Name
+              >Title is Required</small
+            >
           </div>
-        
-          
-         
-           
-            <br /> 
-         
-            <div class="text-center">
-                <button type="submit" class="btn my-color" >Add</button>
-            </div>
-        </form>
-    </app-card>
-  </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleInputDescription">Description</label>
+            <input
+              formControlName="description"
+              type="text"
+              class="form-control"
+              placeholder="Enter Description"
+              value="{{ item.description }}"
+            />
+            <small
+              *ngIf="description.invalid && description.touched"
+              class="text-danger"
+              Name
+              >Description is Required</small
+            >
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="text-center">
+        <button type="submit" class="btn my-color">Update</button>
+      </div>
+    </form>
+  </app-card>
+</div>

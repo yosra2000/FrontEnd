@@ -1,0 +1,179 @@
+<div class="col-md-6 col-xl-12">
+  <app-card
+    [title]="'Contrat List'"
+    [cardClass]="'recent-candidate-card'"
+    [blockClass]="'p-t-0 p-b-0'"
+  >
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="openMyModal('effect-15')"
+    >
+      Launch demo modal
+    </button>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom Service</th>
+            <th>Condidat</th>
+            <th>Moniteur</th>
+            <th>Date/Heure De Rendez-vous</th>
+            <th>Durée</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td (click)="openMyModal('effect-15')">1</td>
+
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">Code</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">Yosra Mahjoub</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="f-w-600">hichem</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">23/07/2000, 10:00</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">2 heures</p>
+            </td>
+
+            <td>
+              <a
+                href="javascript:"
+                data-toggle="tooltip"
+                title="Edit"
+                routerLink="/contrat/edit/1"
+                ><i class="icofont icofont-ui-edit text-c-blue f-16"></i>
+              </a>
+              <a href="javascript:" data-toggle="tooltip" title="Remove"
+                ><i
+                  class="icofont icofont-ui-delete text-c-pink f-16 m-l-10"
+                ></i
+              ></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td (click)="openMyModal('effect-15')">1</td>
+
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">Code</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">Yosra Mahjoub</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="f-w-600">hichem</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">23/07/2000, 10:00</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">2 heures</p>
+            </td>
+
+            <td>
+              <a
+                href="javascript:"
+                data-toggle="tooltip"
+                title="Edit"
+                routerLink="/contrat/edit/1"
+                ><i class="icofont icofont-ui-edit text-c-blue f-16"></i>
+              </a>
+              <a href="javascript:" data-toggle="tooltip" title="Remove"
+                ><i
+                  class="icofont icofont-ui-delete text-c-pink f-16 m-l-10"
+                ></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td (click)="openMyModal('effect-15')">1</td>
+
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">Code</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">Yosra Mahjoub</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="f-w-600">hichem</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">23/07/2000, 10:00</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">2 heures</p>
+            </td>
+
+            <td>
+              <a
+                href="javascript:"
+                data-toggle="tooltip"
+                title="Edit"
+                routerLink="/contrat/edit/1"
+                ><i class="icofont icofont-ui-edit text-c-blue f-16"></i>
+              </a>
+              <a href="javascript:" data-toggle="tooltip" title="Remove"
+                ><i
+                  class="icofont icofont-ui-delete text-c-pink f-16 m-l-10"
+                ></i
+              ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </app-card>
+</div>
+
+<app-modal-animation [modalID]="'effect-15'" [modalClass]="'md-effect-15'">
+  <h3>Employe Details</h3>
+  <div>
+    <div class="text-center">
+      <img
+        src="/assets/images/avatar-4.jpg"
+        alt="err"
+        style="width: 80px; height: 80px"
+      />
+    </div>
+
+    <hr />
+
+    <ul style="overflow: scroll; height: 250px" class="disable-scroll">
+      <li><strong>User Name : </strong>admin</li>
+      <li><strong>Full Name : </strong>Test 1xqs</li>
+      <li><strong>Email : </strong>test1@gmail.com</li>
+      <li><strong>Role : </strong>Admin</li>
+      <li><strong>User Name : </strong>admin</li>
+      <li><strong>Full Name : </strong>Test 1xqs</li>
+      <li><strong>Email : </strong>test1@gmail.com</li>
+      <li><strong>Role : </strong>Admin</li>
+      <li><strong>User Name : </strong>admin</li>
+      <li><strong>Full Name : </strong>Test 1xqs</li>
+      <li><strong>Email : </strong>test1@gmail.com</li>
+      <li><strong>Role : </strong>Admin</li>
+    </ul>
+
+    <hr />
+
+    <!--     /**************************************** -->
+    <button (click)="closeMyModal($event)" class="btn btn-primary md-close">
+      Close Me!!
+    </button>
+  </div>
+  <button
+    (click)="closeMyModal($event)"
+    aria-label="Close"
+    class="md-close-btn"
+  >
+    <i class="icofont icofont-ui-close"></i>
+  </button>
+</app-modal-animation>

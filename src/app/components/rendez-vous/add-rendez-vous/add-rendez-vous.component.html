@@ -1,0 +1,59 @@
+<div class="col-md-6 col-xl-12">
+  <div class="card widget-card-1">
+    <div class="card-block">
+      <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
+      <span class="text-c-blue f-w-600">
+        <h3 class="container d-flex align-items-center justify-content-center">
+          Rendez-vous
+        </h3>
+      </span>
+      <h4></h4>
+      <div>
+        <span class="f-left m-t-10 text-muted">
+          <i class="text-c-blue f-16 icofont icofont-warning m-r-10"></i>Add
+          Rendez-vous
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-12">
+  <app-card [title]="'  '">
+    <form [formGroup]="form" (ngSubmit)="submitHandler()">
+      <div class="row">
+        <div class="col">
+          <label for="role" class="form-control-label">Condidat</label>
+          <select class="form-control" name="employe" id="pays">
+            <option selected>Choisir un Condidat</option>
+            <option value="1">Condidat 1</option>
+            <option value="2">Condidat 2</option>
+            <option value="3">Condidat 3</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="role" class="form-control-label">Moniteur</label>
+          <select class="form-control" name="employe" id="pays">
+            <option selected>Choisir un Moniteur</option>
+            <option value="1">Moniteur 1</option>
+            <option value="2">Moniteur 2</option>
+            <option value="3">Moniteur 3</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="role" class="form-control-label">Durée</label>
+          <input type="number" class="form-control" placeholder="Enter Durée" />
+        </div>
+      </div>
+      <br />
+
+      <br />
+
+      <div class="text-center">
+        <button class="btn btn-primary btn-outline-primary">
+          <i class="icofont icofont-user-alt-7"> </i> Edit Contrat
+        </button>
+      </div>
+    </form>
+  </app-card>
+</div>

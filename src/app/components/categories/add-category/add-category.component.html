@@ -1,43 +1,67 @@
+<div class="content-wrapper container-xxl p-0">
+  <div class="content-body">
+    <div class="card">
+      <div class="card-body">
+        <h3>Add New Category</h3>
 
+        <div class="form-group mt-2">
+          <label for="category" class="form-control-label">Category</label>
+          <select
+            class="form-control"
+            name="category"
+            style="border: 1px solid #28c76f"
+          >
+            <option>Home -> Accessories -> Gift</option>
+            <option>Home -> Accessories -> Comb</option>
+            <option>Home -> Accessories -> Ring</option>
+            <option>Home -> Accessories -> Dress</option>
+            <option>Home -> Accessories -> T-shirt</option>
+            <option>Electronique -> Radio</option>
+            <option>Electronique -> TV</option>
+            <option>Electronique -> Phone</option>
+            <option>Games</option>
+          </select>
+        </div>
 
-<div class="card" >
-  <h3 class="card-header text-center my-color"  >
-      Add Category
-  </h3>
+        <!-- form -->
+        <form class="validate-form mt-2">
+          <div class="form-group">
+            <label class="form-control-label" for="title">Title</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Title"
+              required
+              class="form-control"
+            />
+          </div>
 
-  <div class="card-body">
-      <form>
-          <div class="row">
-           
-              <div class="col">
-                  <div class="form-group">
-                      <label for="exampleInputTitle">Title</label>
-                      <input type="text" class="form-control" placeholder="Enter Title">
-                  </div>
-              </div>
+          <div class="form-group">
+            <label class="form-control-label" for="description"
+              >Description</label
+            >
+            <textarea
+              rows="3"
+              id="description"
+              name="description"
+              placeholder="Enter Description"
+              required
+              class="form-control"
+            ></textarea>
           </div>
-      
-        
-       
-          <div class="input-group-prepend">
-            <span class="input-group-text"> Description</span>
+
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary mt-2 mr-1">
+              Submit
+            </button>
+            <button type="reset" class="btn btn-outline-secondary mt-2">
+              Cancel
+            </button>
           </div>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
-     
-       
-          <br /> 
-       
-          <div class="text-center">
-              <button type="submit" class="btn my-color" >Add</button>
-          </div>
-      </form>
+        </form>
+        <!--/ form -->
+      </div>
+    </div>
   </div>
 </div>
-
-
-
-
-
-
-
-

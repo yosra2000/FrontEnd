@@ -1,0 +1,183 @@
+{
+  "users": [
+    {
+      "id": "3",
+      "photo": "assets/images/avatar-4.jpg",
+      "username": "admin",
+      "fullname": "Test 1xqs",
+      "email": "Test1@gmail.comxqs",
+      "password": "aaa",
+      "role": {
+        "title": "xxxxxx",
+        "description": "xxxxxxx",
+        "id": "em1b3nY"
+      }
+    },
+    {
+      "id": "4",
+      "photo": "assets/images/avatar-4.jpg",
+      "username": "Test 2",
+      "fullname": "Test 2",
+      "email": "Test2@gmail.com",
+      "password": "User",
+      "role": {
+        "id": "2",
+        "title": "User",
+        "description": "permission groups that define the access that certain users have in Asset Essentials."
+      }
+    },
+    {
+      "id": "5",
+      "photo": "assets/images/avatar-4.jpg",
+      "username": "Test ",
+      "fullname": "Test ",
+      "email": "Test3@gmail.om",
+      "password": "123",
+      "role": {
+        "id": "2",
+        "title": "User",
+        "description": "permission groups that define the access that certain users have in Asset Essentials."
+      }
+    },
+    {
+      "role": {
+        "title": "xxxxxx",
+        "description": "xxxxxxx",
+        "id": "em1b3nY"
+      },
+      "photo": "assets/images/avatar-4.jpg",
+      "username": "xxxxxdxxx",
+      "fullname": "dxxxxx",
+      "email": "n7ebek@n7ebek.n7ebexxkxxx",
+      "password": "xxx",
+      "id": "zZamSrJ"
+    },
+    {
+      "role": {
+        "title": "xxxxxx",
+        "description": "xxxxxxx",
+        "id": "em1b3nY"
+      },
+      "photo": "assets/images/avatar-4.jpg",
+      "username": "dddddddupdate",
+      "fullname": "fffffffff",
+      "email": "yosramahjoub2000@gmail.com",
+      "password": "aaa",
+      "id": "9q8Lwv4"
+    },
+    {
+      "role": {
+        "id": "2",
+        "title": "n7ebekkk",
+        "description": "het bizou"
+      },
+      "photo": "assets/images/avatar-4.jpg",
+      "username": "ttttttttttt",
+      "fullname": "yyyyyyy",
+      "email": "n7ebek@n7ebek.n7ebek",
+      "password": "aaa",
+      "id": "IeuBSQK"
+    },
+    {
+      "role": {
+        "id": "2",
+        "title": "n7ebekkk",
+        "description": "het bizou"
+      },
+      "photo": "assets/images/avatar-4.jpg",
+      "username": "vvvv",
+      "fullname": "vvvvvvvvvvv",
+      "email": "yosramahjoub2000@gmail.com",
+      "password": "aaa",
+      "id": "NG_EL3X"
+    },
+    {
+      "role": {
+        "id": "2",
+        "title": "n7ebekkk",
+        "description": "het bizou"
+      },
+      "photo": "assets/images/avatar-4.jpg",
+      "username": "eeeeeeee",
+      "fullname": "rrrrr",
+      "email": "yosramahjoub1925@gmail.com",
+      "password": "123",
+      "id": "uLweTqk"
+    }
+  ],
+  "roles": [
+    {
+      "id": "2",
+      "title": "n7ebekkk",
+      "description": "het bizou"
+    },
+    {
+      "title": "xxxxxx",
+      "description": "xxxxxxx",
+      "id": "em1b3nY"
+    }
+  ],
+  "condidats": [
+    {
+      "TypePermis": {
+        "id": "2",
+        "title": "B"
+      },
+      "nom": "hhh",
+      "prenom": "h",
+      "addresse": "hhhhhhhhhhhh",
+      "profession": "hhh",
+      "cin": 1122,
+      "phone": 1111,
+      "code": 112,
+      "conduit": 22,
+      "remarque": "ggggggg",
+      "email": "yosramahjoub2000@gmail.com",
+      "id": 2
+    },
+    {
+      "TypePermis": {
+        "id": "2",
+        "title": "B"
+      },
+      "nom": "hhh",
+      "prenom": "h",
+      "addresse": "hhhhhhhhhhhh",
+      "profession": "hhh",
+      "cin": 2222,
+      "phone": 2222222222,
+      "code": 2,
+      "conduit": 0,
+      "remarque": "hhhhhhhhhhhh",
+      "email": "yosramahjub1925@gmail.com",
+      "id": 3
+    },
+    {
+      "TypePermis": {
+        "id": "2",
+        "title": "B"
+      },
+      "nom": "hhh",
+      "prenom": "h",
+      "addresse": "hhhhhhhhhhhh",
+      "profession": "hhh",
+      "cin": 333333333333,
+      "phone": 333333333333333,
+      "code": 0,
+      "conduit": 0,
+      "remarque": "ffffffffffffffffff",
+      "email": "yosramahjoub2000@gmail.com",
+      "id": 4
+    }
+  ],
+  "permis": [
+    {
+      "id": "1",
+      "title": "A"
+    },
+    {
+      "id": "2",
+      "title": "B"
+    }
+  ]
+}

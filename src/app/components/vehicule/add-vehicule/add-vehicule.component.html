@@ -1,0 +1,145 @@
+<div class="col-md-6 col-xl-12">
+  <div class="card widget-card-1">
+    <div class="card-block">
+      <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
+      <span class="text-c-blue f-w-600">
+        <h3 class="container d-flex align-items-center justify-content-center">
+          Vehicule
+        </h3>
+      </span>
+      <h4></h4>
+      <div>
+        <span class="f-left m-t-10 text-muted">
+          <i class="text-c-blue f-16 icofont icofont-warning m-r-10"></i>Ajout
+          vehicule
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-12">
+  <app-card [title]="'  '">
+    <h4 class="sub-title">LES CARACTERISTIQUES :</h4>
+
+    <form [formGroup]="form" (ngSubmit)="submitHandler()">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleInputTitle">Marque</label>
+            <input
+              formControlName="marque"
+              type="text"
+              class="form-control"
+              placeholder="Enter marque "
+            />
+            <small
+              *ngIf="marque.invalid && marque.touched"
+              class="text-danger"
+              Name
+              >marque is Required</small
+            >
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleInputDescription">Type</label>
+            <input
+              formControlName="type"
+              type="text"
+              class="form-control"
+              placeholder="Enter type"
+            />
+            <small *ngIf="type.invalid && type.touched" class="text-danger" Name
+              >type is Required</small
+            >
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleInputDescription">Matricule</label>
+            <input
+              formControlName="matricule"
+              type="text"
+              class="form-control"
+              placeholder="Enter matricule"
+            />
+            <small
+              *ngIf="matricule.invalid && matricule.touched"
+              class="text-danger"
+              Name
+              >matricule is Required</small
+            >
+          </div>
+        </div>
+      </div>
+      <br />
+      <h4 class="sub-title">VISITE TECHNIQUE :</h4>
+      <div class="col">
+        <form action="/">
+          <label for="exampleInputDateDebut"> Date Début Visite </label>
+
+          <input type="date" class="form-control" />
+        </form>
+      </div>
+
+      <div class="col">
+        <form action="/">
+          <label for="exampleInputDateFin"> Date Fin Visite </label>
+
+          <input type="date" class="form-control" />
+        </form>
+      </div>
+      <br />
+      <h4 class="sub-title">ASSURANCE :</h4>
+      <div class="col">
+        <form action="/">
+          <label for="exampleInputDateDebut"> Date Début Assurance </label>
+
+          <input type="date" class="form-control" />
+        </form>
+      </div>
+
+      <div class="col">
+        <form action="/">
+          <label for="exampleInputDateFin"> Date Fin Assurance </label>
+
+          <input type="date" class="form-control" />
+        </form>
+      </div>
+
+      <br />
+
+      <h4 class="sub-title">LES PAPIERS NECESSAIRES :</h4>
+
+      <div class="col">
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label">Image Vehicule </label>
+          <input
+            class="form-control form-control-sm"
+            id="formFileSm"
+            type="file"
+          />
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"
+            >Le Certificat D'assurance
+          </label>
+          <input
+            class="form-control form-control-sm"
+            id="formFileSm"
+            type="file"
+          />
+        </div>
+      </div>
+      <br />
+      <div class="text-center">
+        <button class="btn btn-primary btn-outline-primary">
+          <i class="icofont icofont-user-alt-7"> </i> Add New Vehicule
+        </button>
+      </div>
+    </form>
+  </app-card>
+</div>

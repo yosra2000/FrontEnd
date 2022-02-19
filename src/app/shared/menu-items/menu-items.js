@@ -41,6 +41,31 @@ var MENUITEMS = [
                 type: 'link',
                 icon: 'ti-home'
             },
+            {
+                state: 'vehicule',
+                name: 'vehicule',
+                type: 'link',
+                icon: 'ti-home'
+            },
+            {
+                state: 'employe',
+                name: 'employe',
+                type: 'link',
+                icon: 'ti-home'
+            },
+            {
+                state: 'contrat',
+                name: 'Contrat',
+                type: 'link',
+                icon: 'ti-home'
+            },
+
+      {
+        state: 'rendezVous',
+        name: 'rendezVous',
+        type: 'link',
+        icon: 'ti-home'
+    },
 
 
             {

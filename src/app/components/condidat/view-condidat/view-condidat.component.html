@@ -1,3 +1,130 @@
-<p>
-  view-condidat works!
-</p>
+<div class="col-md-6 col-xl-12">
+  <app-card
+    [title]="'Condidat list'"
+    [cardClass]="'recent-candidate-card'"
+    [blockClass]="'p-t-0 p-b-0'"
+  >
+    <input
+      type="text"
+      placeholder="Search"
+      class="form-control ml-25"
+      [(ngModel)]="searchText"
+      (keyup)="Search()"
+    />
+
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Image condidat</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Type Permis</th>
+            <th>Adresse</th>
+            <th>Profession</th>
+            <th>Cin</th>
+            <th>Num téléphone</th>
+            <!-- <th>Date de naissance</th> -->
+            <th>Nombre Examen code</th>
+            <th>Nombre Examen Conduit</th>
+            <th>Remarque</th>
+            <th>Addresse Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of condidats">
+            <td (click)="openMyModal('effect-13')">{{ u.id }}</td>
+            <td>
+              <div
+                data-toggle="tooltip"
+                data-popup="tooltip-custom"
+                placement="top"
+                container="body"
+                title=""
+                class="avatar pull-up my-0"
+              >
+                <img
+                  src="assets/images/avatar-4.jpg"
+                  alt="Avatar"
+                  height="26"
+                  width="26"
+                />
+              </div>
+            </td>
+            <td (click)="openMyModal('effect-13')">{{ u.nom }}</td>
+            <td (click)="openMyModal('effect-13')">{{ u.prenom }}</td>
+            <td (click)="openMyModal('effect-13')">
+              {{ u.TypePermis?.title }}
+            </td>
+            <td (click)="openMyModal('effect-19')">{{ u.addresse }}</td>
+            <td>{{ u.profession }}</td>
+            <td>{{ u.cin }}</td>
+            <td>{{ u.phone }}</td>
+            <!-- <td>{{ u.naissance }}</td> -->
+            <td>{{ u.code }}</td>
+            <td>{{ u.conduit }}</td>
+            <td>{{ u.remarque }}</td>
+            <td>{{ u.email }}</td>
+            <td>
+              <div class="d-flex justify-content-center align-items-center">
+                <a
+                  class="btn btn-link text-warning"
+                  routerLink="/condidat/edit/{{ u.id }}"
+                >
+                  <i class="icofont icofont-ui-edit text-c-blue f-16"></i>
+                </a>
+                <button class="btn btn-link text-danger" (click)="Remove(u)">
+                  <i class="icofont icofont-ui-delete f-16"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </app-card>
+</div>
+
+<app-modal-animation [modalID]="'effect-13'" [modalClass]="'md-effect-13'">
+  <h3>User Details</h3>
+  <div>
+    <div class="text-center">
+      <img
+        src="/assets/images/avatar-4.jpg"
+        alt="err"
+        style="width: 160px; height: 160px"
+      />
+    </div>
+
+    <hr />
+
+    <ul style="overflow: scroll; height: 250px" class="disable-scroll">
+      <li><strong>Nom : </strong>admin</li>
+      <li><strong>Prenom : </strong>Test 1xqs</li>
+      <li><strong>Type Permis: </strong>A</li>
+      <li><strong>Adresse : </strong>Monastir</li>
+      <li><strong>Profession : </strong>Ingenieur</li>
+      <li><strong>Cin: </strong>14020502</li>
+      <li><strong>Num téléphone : </strong>25046935</li>
+      <li><strong>Nombre Examen code : </strong>0</li>
+      <li><strong>Nombre Examen Conduit: </strong>0</li>
+      <li><strong>Remarque : </strong>1 ére inscription</li>
+      <li><strong>Email: </strong>test1@gmail.com</li>
+    </ul>
+
+    <hr />
+
+    <button (click)="closeMyModal($event)" class="btn btn-primary md-close">
+      Close Me!!
+    </button>
+  </div>
+  <button
+    (click)="closeMyModal($event)"
+    aria-label="Close"
+    class="md-close-btn"
+  >
+    <i class="icofont icofont-ui-close"></i>
+  </button>
+</app-modal-animation>

@@ -1,0 +1,236 @@
+<div class="col-md-12 col-xl-12">
+  <div class="card widget-card-1">
+    <div class="card-block">
+      <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
+      <span class="text-c-blue f-w-600">
+        <h3 class="container d-flex align-items-center justify-content-center">
+          Employé
+        </h3>
+      </span>
+      <h4></h4>
+      <div>
+        <span class="f-left m-t-10 text-muted">
+          <i class="text-c-blue f-16 icofont icofont-warning m-r-10"></i>Ajout
+          Employé
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card feed-card">
+  <div class="card-block p-t-0 p-b-0">
+    <div class="row">
+      <div class="col-2 bg-c-blue border-feed">
+        <i class="icofont icofont-users-alt-4 f-50"></i>
+      </div>
+      <div class="col-10">
+        <div class="p-t-30 p-b-30">
+          <h4 class="sub-title">LES INFORMATIONS PERSONNELLES :</h4>
+          <form [formGroup]="form" (ngSubmit)="submitHandler()">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nom</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter UserName"
+                    formControlName="nom"
+                  />
+                  <small
+                    *ngIf="nom.invalid && nom.touched"
+                    class="text-danger"
+                    Name
+                    >nom is Required</small
+                  >
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">prénom</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter FullName"
+                    formControlName="prenom"
+                  />
+                  <small
+                    *ngIf="prenom.invalid && prenom.touched"
+                    class="text-danger"
+                    Name
+                    >prenom is Required</small
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj -->
+
+            <div class="row">
+              <div class="col">
+                <label for="inputAddress">Addresse</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                  formControlName="addresse"
+                />
+                <small
+                  *ngIf="addresse.invalid && addresse.touched"
+                  class="text-danger"
+                  Name
+                  >addresse is Required</small
+                >
+              </div>
+              <div class="col">
+                <label for="role" class="form-control-label">Pays</label>
+                <select class="form-control" name="pays" id="pays">
+                  <option value="1">Tunisie</option>
+                  <option value="2">France</option>
+                  <option value="3">Canada</option>
+                </select>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="exampleInputCin">Num cin</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter Cin"
+                    formControlName="cin"
+                  />
+                  <small
+                    *ngIf="cin.invalid && cin.touched"
+                    class="text-danger"
+                    Name
+                    >cin is Required
+                  </small>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="exampleInputPhone">Num Portable</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter phone number"
+                    formControlName="phone"
+                  />
+                  <small
+                    *ngIf="phone.invalid && phone.touched"
+                    class="text-danger"
+                    Name
+                    >phone is Required
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Emploi</label>
+              <select class="form-control" name="role" id="role">
+                <option value="1">Moniteur</option>
+                <option value="2">Formateur</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Addresse Email </label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+                formControlName="email"
+              />
+              <small
+                *ngIf="email.invalid && email.touched"
+                class="text-danger"
+                Name
+                >email is Required
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input
+                formControlName="password"
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="Password"
+              />
+              <small
+                *ngIf="password.invalid && password.touched"
+                class="text-danger"
+              >
+                Password is invalid
+              </small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Confirm Password</label>
+              <input
+                formControlName="confirmPassword"
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="Confirm Password"
+              />
+              <small
+                *ngIf="confirmPassword.invalid && confirmPassword.touched"
+                class="text-danger"
+              >
+                Confirm Password is invalid
+              </small>
+
+              <!-- <div *ngIf="f.confirm_password.touched && f.confirm_password.invalid" class="alert alert-danger">
+                  <div *ngIf="f.confirm_password.errors.required">Password is required.</div>
+                  <div *ngIf="f.confirm_password.errors.confirmedValidator">Password and Confirm Password must be match.</div>
+              </div>-->
+            </div>
+
+            <h4 class="sub-title">LES PAPIERS NECESSAIRES :</h4>
+
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="formFileSm" class="form-label"
+                    >Image condidat</label
+                  >
+                  <input
+                    class="form-control form-control-sm"
+                    id="formFileSm"
+                    type="file"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="formFileSm" class="form-label"
+                    >Photocopie C.I.N
+                  </label>
+                  <input
+                    class="form-control form-control-sm"
+                    id="formFileSm"
+                    type="file"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button class="btn btn-primary btn-outline-primary">
+                <i class="icofont icofont-user-alt-7"> </i> Add New Employé
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

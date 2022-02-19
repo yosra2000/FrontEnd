@@ -1,0 +1,154 @@
+<div class="col-md-6 col-xl-12">
+  <app-card
+    [title]="'Contrat List'"
+    [cardClass]="'recent-candidate-card'"
+    [blockClass]="'p-t-0 p-b-0'"
+  >
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Employés</th>
+            <th>Durée</th>
+            <th>Salaire</th>
+            <th>Prix/Heure</th>
+            <th>Contrat File</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td (click)="openMyModal('effect-15')">1</td>
+
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">driver</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">2moins</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="f-w-600">1500</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">30 dt</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">File</p>
+            </td>
+
+            <td>
+              <a
+                href="javascript:"
+                data-toggle="tooltip"
+                title="Edit"
+                routerLink="/contrat/edit/1"
+                ><i class="icofont icofont-ui-edit text-c-blue f-16"></i>
+              </a>
+              <a href="javascript:" data-toggle="tooltip" title="Remove"
+                ><i
+                  class="icofont icofont-ui-delete text-c-pink f-16 m-l-10"
+                ></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td (click)="openMyModal('effect-15')">1</td>
+
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">driver</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">2moins</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="f-w-600">1500</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">30 dt</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">File</p>
+            </td>
+
+            <td>
+              <a
+                href="javascript:"
+                data-toggle="tooltip"
+                title="Edit"
+                routerLink="/contrat/edit/1"
+                ><i class="icofont icofont-ui-edit text-c-blue f-16"></i>
+              </a>
+              <a href="javascript:" data-toggle="tooltip" title="Remove"
+                ><i
+                  class="icofont icofont-ui-delete text-c-pink f-16 m-l-10"
+                ></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td (click)="openMyModal('effect-15')">1</td>
+
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">driver</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">2moins</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="f-w-600">1500</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">30 dt</p>
+            </td>
+            <td (click)="openMyModal('effect-15')">
+              <p class="m-l-10 d-inline-block f-w-600">File</p>
+            </td>
+
+            <td>
+              <a
+                href="javascript:"
+                data-toggle="tooltip"
+                title="Edit"
+                routerLink="/contrat/edit/1"
+                ><i class="icofont icofont-ui-edit text-c-blue f-16"></i>
+              </a>
+              <a href="javascript:" data-toggle="tooltip" title="Remove"
+                ><i
+                  class="icofont icofont-ui-delete text-c-pink f-16 m-l-10"
+                ></i
+              ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </app-card>
+</div>
+
+<app-modal-animation [modalID]="'effect-15'" [modalClass]="'md-effect-15'">
+  <h3>Contrat Details</h3>
+  <div>
+    <hr />
+
+    <ul style="overflow: scroll; height: 250px" class="disable-scroll">
+      <li><strong>Employé : </strong>Driver</li>
+      <li><strong> Durée: </strong>1 ans</li>
+      <li><strong>Salaire : </strong>1500 dt</li>
+      <li><strong>Prix/heure: </strong>30 dt</li>
+      <li><strong>Contrat File: </strong>Download File</li>
+    </ul>
+    <hr />
+
+    <button (click)="closeMyModal($event)" class="btn btn-primary md-close">
+      Close Me!!
+    </button>
+  </div>
+  <button
+    (click)="closeMyModal($event)"
+    aria-label="Close"
+    class="md-close-btn"
+  >
+    <i class="icofont icofont-ui-close"></i>
+  </button>
+</app-modal-animation>

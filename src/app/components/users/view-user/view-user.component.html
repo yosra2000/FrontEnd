@@ -1,13 +1,16 @@
-<div class="col-md-6 col-xl-12">
-  <app-card [title]="'Users list'" [cardClass]="'recent-candidate-card'" [blockClass]="'p-t-0 p-b-0'">
-    
+<div>
+  <app-card
+    [title]="'Users list'"
+    [cardClass]="'recent-candidate-card'"
+    [blockClass]="'p-t-0 p-b-0'"
+  >
     <input
-			type="text"
-			placeholder="Search"
-			class="form-control ml-25"
-			[(ngModel)]="searchText"
-			(keyup)="Search()"
-		/>
+      type="text"
+      placeholder="Search"
+      class="form-control ml-25"
+      [(ngModel)]="searchText"
+      (keyup)="Search()"
+    />
 
     <div class="table-responsive">
       <table class="table table-hover">
@@ -18,14 +21,14 @@
             <th>User Name</th>
             <th>Full Name</th>
             <th>Email</th>
-             <th>Role</th>
+            <th>Role</th>
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody>       
+        <tbody>
           <tr *ngFor="let u of users">
-            <td>{{ u.id }}</td>
-            <td>
+            <td (click)="openMyModal('effect-19')">{{ u.id }}</td>
+            <td (click)="openMyModal('effect-19')">
               <div
                 data-toggle="tooltip"
                 data-popup="tooltip-custom"
@@ -34,34 +37,23 @@
                 title=""
                 class="avatar pull-up my-0"
               >
-                <img
-                  [src]="u.photo"
-                  alt="Avatar"
-                  height="26"
-                  width="26"
-                />
+                <img [src]="u.photo" alt="Avatar" height="26" width="26" />
               </div>
             </td>
-            <td>{{ u.username }}</td>
-            <td>{{ u.fullname }}</td>
-            <td>{{ u.email }}</td>
-             <td>{{ u.role?.title}}</td>
+            <td (click)="openMyModal('effect-19')">{{ u.username }}</td>
+            <td (click)="openMyModal('effect-19')">{{ u.fullname }}</td>
+            <td (click)="openMyModal('effect-19')">{{ u.email }}</td>
+            <td (click)="openMyModal('effect-19')">{{ u.role?.title }}</td>
             <td>
-              <div
-                class="d-flex justify-content-center align-items-center"
-              >
+              <div class="d-flex justify-content-center align-items-center">
                 <a
                   class="btn btn-link text-warning"
                   routerLink="/users/edit/{{ u.id }}"
                 >
-                <i class="icofont icofont-ui-edit  f-16"></i>
-
+                  <i class="icofont icofont-ui-edit f-16"></i>
                 </a>
-                <button
-                  class="btn btn-link text-danger"
-                  (click)="Remove(u)"
-                >
-                <i class="icofont icofont-ui-delete f-16 "></i>
+                <button class="btn btn-link text-danger" (click)="Remove(u)">
+                  <i class="icofont icofont-ui-delete f-16"></i>
                 </button>
               </div>
             </td>
@@ -71,3 +63,47 @@
     </div>
   </app-card>
 </div>
+
+<!-- modal -->
+<app-modal-animation [modalID]="'effect-19'" [modalClass]="'md-effect-19'">
+  <h3>Employe Details</h3>
+  <div>
+    <div class="text-center">
+      <img
+        src="/assets/images/avatar-4.jpg"
+        alt="err"
+        style="width: 80px; height: 80px"
+      />
+    </div>
+
+    <hr />
+
+    <ul style="overflow: scroll; height: 250px" class="disable-scroll">
+      <li><strong>User Name : </strong>admin</li>
+      <li><strong>Full Name : </strong>Test 1xqs</li>
+      <li><strong>Email : </strong>test1@gmail.com</li>
+      <li><strong>Role : </strong>Admin</li>
+      <li><strong>User Name : </strong>admin</li>
+      <li><strong>Full Name : </strong>Test 1xqs</li>
+      <li><strong>Email : </strong>test1@gmail.com</li>
+      <li><strong>Role : </strong>Admin</li>
+      <li><strong>User Name : </strong>admin</li>
+      <li><strong>Full Name : </strong>Test 1xqs</li>
+      <li><strong>Email : </strong>test1@gmail.com</li>
+      <li><strong>Role : </strong>Admin</li>
+    </ul>
+
+    <hr />
+
+    <button (click)="closeMyModal($event)" class="btn btn-primary md-close">
+      Close Me!!
+    </button>
+  </div>
+  <button
+    (click)="closeMyModal($event)"
+    aria-label="Close"
+    class="md-close-btn"
+  >
+    <i class="icofont icofont-ui-close"></i>
+  </button>
+</app-modal-animation>

@@ -1,31 +1,46 @@
+<div class="card">
+  <h3 class="card-header text-center my-color">Update User</h3>
 
-<div class="card" >
-    
-    <h3 class="card-header text-center my-color"  >
-        Update User
-    </h3>
-
-    <div class="card-body">
-        <form  [formGroup]="exform"  (ngSubmit)="submitHandler()" >
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label for="exampleInputUserName">UserName</label>
-                        <input  formControlName="username" type="text" class="form-control" placeholder="Enter UserName"   value="{{ item.username}}">
-                        <small *ngIf="username.invalid && username.touched" class="text-danger"Name>UserName is Required</small> 
-
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label for="exampleInputFullName">FullName</label>
-                        <input  formControlName="fullname" type="text" class="form-control" placeholder="Enter FullName"   value="{{ item.fullname}}">
-                        <small *ngIf="fullname.invalid && fullname.touched" class="text-danger">FullName is Required</small> 
-
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="row">
+  <div class="card-body">
+    <form [formGroup]="exform" (ngSubmit)="submitHandler()">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleInputUserName">UserName</label>
+            <input
+              formControlName="username"
+              type="text"
+              class="form-control"
+              placeholder="Enter UserName"
+              value="{{ item.username }}"
+            />
+            <small
+              *ngIf="username.invalid && username.touched"
+              class="text-danger"
+              Name
+              >UserName is Required</small
+            >
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleInputFullName">FullName</label>
+            <input
+              formControlName="fullname"
+              type="text"
+              class="form-control"
+              placeholder="Enter FullName"
+              value="{{ item.fullname }}"
+            />
+            <small
+              *ngIf="fullname.invalid && fullname.touched"
+              class="text-danger"
+              >FullName is Required</small
+            >
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="inputCity">City</label>
@@ -43,98 +58,87 @@
                 </div>
       
             </div> -->
-            
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input  formControlName="email"  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"   value="{{ item.email}}">
-                        <small *ngIf="email.invalid && email.touched" class="text-danger">Email is Required</small>
-        
-                    </div>
-                 
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label for="role" class="form-control-label">Role</label>
-                        <select
-                            class="form-control"
-                            name="role"
-                            id="role"
-                            [(ngModel)]="roleId"
-                            [ngModelOptions]="{standalone: true}"
-                            (change)="onChangeRole($event)"
-                         > 
-                            <option *ngFor="let r of roles" [value]="r.id" [selected]="item.role && r.id === item.role.id"  value="{{ item.role}}"
-                            >
-                                {{ r.title }}
-                            </option>
-                        </select>
-                    </div>
 
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              formControlName="email"
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+              value="{{ item.email }}"
+            />
+            <small *ngIf="email.invalid && email.touched" class="text-danger"
+              >Email is Required</small
+            >
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="role" class="form-control-label">Role</label>
+            <select
+              class="form-control"
+              name="role"
+              id="role"
+              [(ngModel)]="roleId"
+              [ngModelOptions]="{ standalone: true }"
+              (change)="onChangeRole($event)"
+            >
+              <option
+                *ngFor="let r of roles"
+                [value]="r.id"
+                [selected]="item.role && r.id === item.role.id"
+                value="{{ item.role }}"
+              >
+                {{ r.title }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
 
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Password"
+        />
+        <small *ngIf="password.invalid && password.touched" class="text-danger">
+          Password is invalid
+        </small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Confirm Password</label>
+        <input
+          formControlName="confirmPassword"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Confirm Password"
+        />
+        <small
+          *ngIf="confirmPassword.invalid && confirmPassword.touched"
+          class="text-danger"
+        >
+          Confirm Password is invalid
+        </small>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                </div>
-      
-            </div>           
-
-
-
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input    formControlName="password"   type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" >
-                <small *ngIf="password.invalid && password.touched" class="text-danger">
-                    Password is invalid
-                </small>
-
-
-           
-           
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Confirm Password</label>
-                <input   formControlName="confirmPassword"  type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
-                <small *ngIf="confirmPassword.invalid && confirmPassword.touched" class="text-danger">
-                    Confirm Password is invalid
-                </small>
-
-                <!-- <div *ngIf="f.confirm_password.touched && f.confirm_password.invalid" class="alert alert-danger">
+        <!-- <div *ngIf="f.confirm_password.touched && f.confirm_password.invalid" class="alert alert-danger">
                     <div *ngIf="f.confirm_password.errors.required">Password is required.</div>
                     <div *ngIf="f.confirm_password.errors.confirmedValidator">Password and Confirm Password must be match.</div>
-                </div>--> 
-           
-            </div>
+                </div>-->
+      </div>
 
-       
-         
-            <div class="text-center">
-                <button type="submit" class="btn my-color"   >Update </button>
-            </div>
-        </form>
-    </div>
+      <div class="text-center">
+        <button type="submit" class="btn my-color">Update</button>
+      </div>
+    </form>
   </div>
-
-
-
-
-
-
-
-
+</div>
